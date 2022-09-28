@@ -236,7 +236,6 @@ p {
 
 .ctrl-btns {
   display: grid;
-  /* grid-template-columns: repeat(3, 100px); */
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   grid-template-rows: auto;
   align-content: center;
@@ -296,8 +295,14 @@ p {
   background-color: var(--color-cards-bg);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 14px 14px 0 14px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+.card p {
+ margin-top: 50px;
+}
 .notes {
   background-color: var(--color-cards-bg);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
