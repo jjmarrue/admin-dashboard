@@ -47,7 +47,7 @@ body {
   font-family: var(--font-family);
   font-weight: 300;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1,
@@ -70,7 +70,7 @@ p {
 
 .container {
   width: 90%;
-  min-height: 100vh;
+  
   max-width: 1340px;
   margin: 0 auto;
   display: grid;
@@ -138,7 +138,7 @@ p {
   display: flex;
   flex-direction: column;
   background-color: var(--color-main-bg);
-  padding: 40px 15px; 
+  padding-left: 15px; 
 }
 
 .topbar {
@@ -149,7 +149,6 @@ p {
   justify-content: space-between;
   padding: 5px 10px 22px;
   margin-bottom: 20px;
-  /* max-width: 95%; */
   box-shadow: 0px 15px 5px -15px rgba(0,0,0,0.2);
 }
 
@@ -300,9 +299,10 @@ p {
   flex-direction: column;
 }
 
-.card p {
- margin-top: 50px;
+.card h3, .card p {
+  flex: 1;
 }
+
 .notes {
   background-color: var(--color-cards-bg);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
