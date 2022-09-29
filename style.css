@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all .1s ease-in;
 }
 
 :root {
@@ -16,7 +17,6 @@
   --font-h1: 1.7rem;
   --font-h2: 1.55rem;
   --font-h3: 1.35rem;
-
 
   --color-body-bg: #fffdfb;
   --color-sidebar-bg: cornflowerblue;
@@ -47,7 +47,7 @@ body {
   font-family: var(--font-family);
   font-weight: 300;
   width: 100vw;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 h1,
@@ -70,7 +70,6 @@ p {
 
 .container {
   width: 90%;
-  
   max-width: 1340px;
   margin: 0 auto;
   display: grid;
@@ -229,10 +228,6 @@ p {
   border-radius: 50%;
 }
 
-.content, .projects {
-  border: 1px solid coral;
-}
-
 .ctrl-btns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -263,7 +258,6 @@ p {
 .content {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
   align-items: start;
   gap: 10px;
 }
@@ -297,21 +291,48 @@ p {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  grid-column: span 2;
-  gap: 20px;
+  gap: 24px;
 }
 
 .card {
   background-color: var(--color-cards-bg);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 14px 14px 0 14px;
-  min-height: 100%;
+  min-height: 225px;
   display: flex;
   flex-direction: column;
+  align-content: space-between;
 }
 
-.card h3, .card p {
-  flex: 1;
+.card .thumb {
+  background: url(https://picsum.photos/536/354);
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 25%;
+  margin-bottom: 1rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card h3,
+.card p {
+  padding: 0 20px 0;
+}
+
+.card .external-icons {
+  display: flex;
+  gap: 12px;
+  margin: 16px 20px;
+  justify-content: flex-end;
+}
+
+.card .external-icons * {
+  max-width: 22px;
+  height: auto;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
 
 .notes {
@@ -324,10 +345,6 @@ p {
   padding-bottom: 24px;
 }
 
-.trending {
-  
-
-}
 
 .trends {
   background-color: var(--color-cards-bg);
