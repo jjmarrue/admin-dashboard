@@ -304,7 +304,7 @@ p {
 }
 
 .card .thumb {
-  background: url(https://picsum.photos/536/354);
+  /* background: url(https://picsum.photos/536/354); */
   max-width: 100%;
   height: auto;
   padding-bottom: 25%;
