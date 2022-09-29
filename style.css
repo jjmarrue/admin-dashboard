@@ -14,32 +14,35 @@
   --font-medium: 500;
   --font-bold: 700;
   --font-text: 1.1rem;
-  --font-h1: 1.7rem;
-  --font-h2: 1.55rem;
-  --font-h3: 1.35rem;
+  --font-h1: 1.6rem;
+  --font-h2: 1.45rem;
+  --font-h3: 1.25rem;
 
-  --color-body-bg: #fffdfb;
-  --color-sidebar-bg: cornflowerblue;
-  --color-main-bg: #f5f7f8;
-  --color-topbar-bg: #fffdfb;
-  --color-cards-bg: #fffdfb;
-  --color-btn-bg: #457b9d;
-  --color-footer-bg: ;
+  --color-body-bg: #fcfcfc;
+  --color-sidebar-bg: #252422;
+  --color-main-bg: #fcfcfc;
+  --color-topbar-bg: #ffffff;
+  --color-cards-bg: #ffffff;
+  --color-btn-bg: #252422;
+  --color-footer-bg: #252422;
 
-  --color-default-text: #2b2d42;
-  --color-logo-icon: #2b2d42;
-  --color-btn-text: #fffdfb;
-  --color-sidebar-icons: #457b9d;
-  --color-topbar-icons: ;
-  --color-sidebar-text: #457b9d;
-  --color-sidebar-hover: #f4a261;
+  --color-default-text: #252422;
+  --color-sidebar-text: #ffffff;
+  --color-topbar-text: #252422;
+  --color-btn-text: #ffffff;
   --color-main-headings: #ffffff;
-  --border-search: 1px solid #edede9;
+  --color-sidebar-hover: #3e92cc;
+  --color-btn-hover: #3e92cc;
+  --color-logo-icon: #ffffff;
+  --color-sidebar-icons: #ffffff;
+  --color-topbar-icons: #252422;
 
+  --border-search: 1px solid #edede9;
 }
 
 html {
   font-size: 15px;
+  color: var(--color-default-text);
 }
 
 body {
@@ -57,7 +60,7 @@ h3 {
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 a {
@@ -78,7 +81,7 @@ p {
 }
 
 .sidebar {
-  padding: 35px 25px;
+  padding: 35px 50px;
   background-color: var(--color-sidebar-bg);
 }
 
@@ -94,21 +97,22 @@ p {
 .company-logo {
   margin-bottom: 40px;
   position: relative;
+  fill: var(--color-sidebar-icons);
 }
 
 .company-logo img{
   display: inline;
   position: absolute;
-  width: 1.7rem;
+  width: 1.75rem;
   height: auto;
-  fill: var(--color-sidebar-icons);
-  top: 1px;
+  top: -1px;
   left: 55px;
 }
 
 .company-logo h1 {
   display: inline;
   font-size: var(--font-h1);
+  color: var(--color-main-headings);
 }
 
 .item{
@@ -137,7 +141,6 @@ p {
   display: flex;
   flex-direction: column;
   background-color: var(--color-main-bg);
-  padding-left: 15px; 
 }
 
 .topbar {
@@ -146,9 +149,10 @@ p {
   grid-template-rows: 1fr 1fr;
   background-color: var(--color-topbar-bg);
   justify-content: space-between;
-  padding: 5px 10px 22px;
+  padding: 5px 24px 22px 30px;
   margin-bottom: 20px;
   box-shadow: 0px 15px 5px -15px rgba(0,0,0,0.2);
+  color:var(--color-topbar-text);
 }
 
 .search {
@@ -161,18 +165,19 @@ p {
   grid-column: span 2;
 }
 
-.search-icon, .reminder-icon {
-  width: 1.35em;
+.search-icon,
+.reminder-icon {
+  width: 1.45em;
   height: auto;
   fill: var(--color-topbar-icons);
 }
 
 .search-bar {
-  width: 85%;
-  height: 1.5rem;
+  width: 75%;
+  height: 2rem;
   border: var(--border-search);
   border-radius: 8px;
-  padding: 3px 8px;
+  padding: 6px 12px;
 }
 .search-icon {
   margin-right: 8px;
@@ -230,27 +235,29 @@ p {
 
 .ctrl-btns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 30%));
   grid-template-rows: auto;
   align-content: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content:end;
+  gap: 10px;
 }
 
 .ctrl-btns button {
   background-color: var(--color-btn-bg);
   color: var(--color-btn-text);
+  font-weight: var(--font-bold);
   outline: none;
-  padding: 5px 16px;
-  border: 1px solid var(--color-btn-bg);
+  padding: 5px;
+  border: none;
   border-radius: 20px;
   font-size: 1rem;
-  font-weight: var(--font-medium);
+
 }
 
 .ctrl-btns button:hover {
-  background-color: ;
-  color: ;
+  outline: none;
+  border: none;
+  background-color: var(--color-btn-hover);
 }
 
 /*----------------------*/
@@ -260,15 +267,11 @@ p {
   grid-template-columns: 3fr 1fr;
   align-items: start;
   gap: 10px;
+  padding: 0 10px 0 30px;
 }
 
 .projects {
   grid-row: span 3;
-}
-
-.trending {
-  grid-column: 2;
-  /* grid-row: 1/2; */
 }
 
 .projects,
@@ -281,6 +284,7 @@ p {
 .announcements h2,
 .trending h2 {
   margin-bottom: 10px;
+  margin-left: 2px;
 }
 .projects h3,
 .announcements h3,
@@ -304,7 +308,6 @@ p {
 }
 
 .card .thumb {
-  /* background: url(https://picsum.photos/536/354); */
   max-width: 100%;
   height: auto;
   padding-bottom: 25%;
