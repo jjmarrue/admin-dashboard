@@ -286,6 +286,7 @@ p {
   margin-bottom: 10px;
   margin-left: 2px;
 }
+
 .projects h3,
 .announcements h3,
 .trending h3 {
@@ -341,13 +342,15 @@ p {
 .notes {
   background-color: var(--color-cards-bg);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 14px 14px 0 14px;
+  padding: 20px;
 }
 
-.note {
-  padding-bottom: 24px;
+.note .line {
+  display: inline-block;
+  width: 100%;
+  border-top: 0.2px solid rgba(0,0,0,0.1);
+  margin: 16px 0;
 }
-
 
 .trends {
   background-color: var(--color-cards-bg);
