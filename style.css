@@ -72,7 +72,7 @@ p {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1340px;
   margin: 0 auto;
   display: grid;
@@ -235,7 +235,7 @@ p {
 
 .ctrl-btns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 30%));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 25%));
   grid-template-rows: auto;
   align-content: center;
   justify-content:end;
@@ -265,6 +265,7 @@ p {
 .content {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(375px, 1fr)); */
   align-items: start;
   gap: 10px;
   padding: 0 10px 0 30px;
@@ -355,7 +356,7 @@ p {
 .trends {
   background-color: var(--color-cards-bg);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 14px 14px 0 14px;
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -365,8 +366,11 @@ p {
   grid-template-columns: 50px 1fr;
   align-items: center;
   justify-items: start;
-  gap: 5px;
   padding: 9px 0;
+}
+
+.trend h3 {
+  margin: 0;
 }
 
 .avatar {
@@ -376,4 +380,35 @@ p {
 .footer {
   grid-column: span 2;
   border: 1px solid black;
+}
+
+
+
+@media only screen and (max-width: 950px) {
+  .ctrl-btns {
+    grid-template-columns: repeat(3, 1fr);
+  }  
+}
+
+@media only screen and (max-width: 876px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+   display: none;
+  }  
+  .content {
+    grid-template-columns: 1fr;
+  }  
+}
+
+@media only screen and (max-width: 675px) {
+
+  .ctrl-btns {
+grid-template-columns: 1fr;
+  }
+  .ctrl-btns button {
+    grid-column: span 1;
+  }
+
 }
