@@ -81,6 +81,7 @@ p {
 }
 
 .sidebar {
+  position: relative;
   padding: 35px 50px;
   background-color: var(--color-sidebar-bg);
 }
@@ -141,6 +142,7 @@ p {
   display: flex;
   flex-direction: column;
   background-color: var(--color-main-bg);
+  padding-bottom: 20px;
 }
 
 .topbar {
@@ -306,7 +308,7 @@ p {
   min-height: 225px;
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  justify-content: space-around;
 }
 
 .card .thumb {
@@ -379,36 +381,51 @@ p {
 
 .footer {
   grid-column: span 2;
-  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+
 }
 
+.footer p {
+  font-size: var(--footer-txt-side);
+  font-weight: 300;
+  line-height: 1.75em;
+}
 
+.footer .fa-github{
+  font-size: 20px;
+}
 
 @media only screen and (max-width: 950px) {
   .ctrl-btns {
     grid-template-columns: repeat(3, 1fr);
-  }  
+  }
 }
 
 @media only screen and (max-width: 876px) {
   .container {
     grid-template-columns: 1fr;
   }
-  .sidebar {
-   display: none;
-  }  
   .content {
     grid-template-columns: 1fr;
-  }  
+    padding: 0 10px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .open-btn {
+    display:inline;
+  }
+  .projects {
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 675px) {
-
   .ctrl-btns {
 grid-template-columns: 1fr;
   }
   .ctrl-btns button {
     grid-column: span 1;
   }
-
 }
