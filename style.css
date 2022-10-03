@@ -76,14 +76,18 @@ p {
   max-width: 1340px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
 
 .sidebar {
-  position: relative;
   padding: 35px 50px;
   background-color: var(--color-sidebar-bg);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .nav-link{
@@ -96,18 +100,18 @@ p {
 }
 
 .company-logo {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   position: relative;
   fill: var(--color-sidebar-icons);
 }
 
 .company-logo img{
-  display: inline;
-  position: absolute;
+  display: inline-block;
+  
   width: 1.75rem;
   height: auto;
   top: -1px;
-  left: 55px;
+  left: 0;
 }
 
 .company-logo h1 {
@@ -159,13 +163,17 @@ p {
 
 .search {
   display: grid;
-  grid-template-columns: auto 4fr 2fr;
+  grid-template-columns: 50px 3fr auto 2fr;
   grid-template-rows: auto;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 28px;
   grid-column: span 2;
 }
+
+/* .search * {
+  border: 1px solid red;
+} */
 
 .search-icon,
 .reminder-icon {
@@ -175,7 +183,7 @@ p {
 }
 
 .search-bar {
-  width: 75%;
+  width: 98%;
   height: 2rem;
   border: var(--border-search);
   border-radius: 8px;
@@ -396,6 +404,41 @@ p {
   font-size: 20px;
 }
 
+#togglemenu {
+  display: none;
+}
+
+.sidebar label{
+	width: 54px;
+	height: 54px;
+	position: absolute;
+	right: 30px;
+	top: 40px;
+	z-index: 100;
+  cursor:pointer;
+
+}
+
+#togglemenu~.sidebar-open{
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+#togglemenu:checked~.sidebar-open{
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.sidebar label i {
+  color: var(--color-btn-text);
+}
+
+
+
 @media only screen and (max-width: 950px) {
   .ctrl-btns {
     grid-template-columns: repeat(3, 1fr);
@@ -410,11 +453,8 @@ p {
     grid-template-columns: 1fr;
     padding: 0 10px;
   }
-  .sidebar {
-    display: none;
-  }
-  .open-btn {
-    display:inline;
+  .search-bar {
+    width: 90%;
   }
   .projects {
     padding: 0;
