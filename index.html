@@ -12,17 +12,19 @@
   <div class="container">
     <div class="main">
       <div class="topbar">
+        <div class="company-logo">
+          <h1>The <img src="./assets/icons/onering.svg" alt="one ring">
+             Fellowship</h1>
+        </div>
         <div class="search">
           <input type="checkbox" id="togglemenu"></input>
             <label for="togglemenu">
-              <i class="fa-solid fa-bars fa-2x"></i>
+              <i class="menu-icon fa-solid fa-bars fa-2x"></i>
             </label>
           <div class="sidebar sidebar-open">
-            <label for="togglemenu"><i class="fa-solid fa-xmark fa-3x"></i></label>
-            <div class="company-logo">
-              <h1>The <img src="./assets/icons/onering.svg" alt="" class="item-icon">
-                 Fellowship</h1>
-            </div>
+            <div class="item">
+              <label for="togglemenu"><i class="fa-solid fa-xmark fa-3x"></i></label>
+            </div>           
             <div class="item">
               <a href="#" class="nav-link">
                 <svg class="item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,3L20,9V21H15V14H9V21H4V9L12,3Z" /></svg>
@@ -77,11 +79,11 @@
                 privacy
               </a>
             </div>
-          </div>       
+          </div>  
           <input class="search-bar" type="text">
-          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.05,13H1V11H3.05C3.5,6.83 6.83,3.5 11,3.05V1H13V3.05C17.17,3.5 20.5,6.83 20.95,11H23V13H20.95C20.5,17.17 17.17,20.5 13,20.95V23H11V20.95C6.83,20.5 3.5,17.17 3.05,13M12,5A7,7 0 0,0 5,12A7,7 0 0,0 12,19A7,7 0 0,0 19,12A7,7 0 0,0 12,5Z" /></svg>
+          <i class="search-icon fa-solid fa-magnifying-glass"></i>
           <div class="profile-info">
-            <svg class="reminder-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>
+            <i class="reminder-icon fa-solid fa-bell"></i>
             <img src="./assets/avatars/sam.jpg" alt="" class="profile-icon-sm">
             <p>Samwise Gamgee</p>
           </div>
@@ -110,10 +112,10 @@
               <div class="thumb" style="background-image: url(https://picsum.photos/id/1002/536/354);"></div>
               <h3>Middle-Earth 3D mapping</h3>
               <p>A brand-new approach to capturing Middle-Earth's vast resources.</p>
-              <div class="external-icons">
-                <img src="./assets/icons/robot-love.svg" alt="like story button" class="like">
-                <img src="./assets/icons/pin.svg" alt="pin story button" class="pin">
-                <img src="./assets/icons/share.svg" alt="share story button" class="share">
+              <div class="social-icons">
+                <i class="like fa-sharp fa-solid fa-heart"></i>
+                <i class="pin fa-sharp fa-solid fa-thumbtack"></i>
+                <i class="share fa-solid fa-share-nodes"></i>
               </div>
             </div>
 
@@ -121,10 +123,10 @@
               <div class="thumb" style="background-image: url(https://picsum.photos/id/1028/536/354);"></div>
               <h3>Project Precious</h3>
               <p>Smeagol and Gollum have come up with an innovative tool that can finally locate the Precious.</p>
-              <div class="external-icons">
-                <img src="./assets/icons/robot-love.svg" alt="like story button" class="like">
-                <img src="./assets/icons/pin.svg" alt="pin story button" class="pin">
-                <img src="./assets/icons/share.svg" alt="share story button" class="share">
+              <div class="social-icons">
+                <i class="like fa-sharp fa-solid fa-heart"></i>
+                <i class="pin fa-sharp fa-solid fa-thumbtack"></i>
+                <i class="share fa-solid fa-share-nodes"></i>
               </div>
             </div>
 
@@ -132,10 +134,10 @@
               <div class="thumb" style="background-image: url(https://picsum.photos/id/1079/536/354);"></div>
               <h3>Wizard Clock</h3>
               <p>This brilliant app will assist Gandalf to arrive precisely when he means to.</p>
-              <div class="external-icons">
-                <img src="./assets/icons/robot-love.svg" alt="like story button" class="like">
-                <img src="./assets/icons/pin.svg" alt="pin story button" class="pin">
-                <img src="./assets/icons/share.svg" alt="share story button" class="share">
+              <div class="social-icons">
+                <i class="like fa-sharp fa-solid fa-heart"></i>
+                <i class="pin fa-sharp fa-solid fa-thumbtack"></i>
+                <i class="share fa-solid fa-share-nodes"></i>
               </div>
             </div>
 
@@ -143,10 +145,10 @@
               <div class="thumb" style="background-image: url(https://picsum.photos/id/110/536/354);"></div>
               <h3>Taters or Po-tay-toes?</h3>
               <p>Designed by Samwise, this AI has already helped answer this age's most important question.</p>
-              <div class="external-icons">
-                <img src="./assets/icons/robot-love.svg" alt="like story button" class="like">
-                <img src="./assets/icons/pin.svg" alt="pin story button" class="pin">
-                <img src="./assets/icons/share.svg" alt="share story button" class="share">
+              <div class="social-icons">
+                <i class="like fa-sharp fa-solid fa-heart"></i>
+                <i class="pin fa-sharp fa-solid fa-thumbtack"></i>
+                <i class="share fa-solid fa-share-nodes"></i>
               </div>
             </div>
 
@@ -154,10 +156,10 @@
               <div class="thumb" style="background-image: url(https://picsum.photos/id/196/536/354);"></div>
               <h3>Hobbit Tracker</h3>
               <p>An Uruk Hai researcher built this app to track hobbits that are being taken to Isengard.</p>
-              <div class="external-icons">
-                <img src="./assets/icons/robot-love.svg" alt="like story button" class="like">
-                <img src="./assets/icons/pin.svg" alt="pin story button" class="pin">
-                <img src="./assets/icons/share.svg" alt="share story button" class="share">
+              <div class="social-icons">
+                <i class="like fa-sharp fa-solid fa-heart"></i>
+                <i class="pin fa-sharp fa-solid fa-thumbtack"></i>
+                <i class="share fa-solid fa-share-nodes"></i>
               </div>
             </div>
 
@@ -165,10 +167,10 @@
               <div class="thumb" style="background-image: url(https://picsum.photos/id/401/536/354);"></div>
               <h3>Who needs the Eagles?</h3>
               <p>This military-grade flying machine will take you into Mount Doom for cheap.</p>
-              <div class="external-icons">
-                <img src="./assets/icons/robot-love.svg" alt="like story button" class="like">
-                <img src="./assets/icons/pin.svg" alt="pin story button" class="pin">
-                <img src="./assets/icons/share.svg" alt="share story button" class="share">
+              <div class="social-icons">
+                <i class="like fa-sharp fa-solid fa-heart"></i>
+                <i class="pin fa-sharp fa-solid fa-thumbtack"></i>
+                <i class="share fa-solid fa-share-nodes"></i>
               </div>
             </div>
 
@@ -240,7 +242,7 @@
       </div>
     </div>
     <div class="footer">
-      <p><a href="https://github.com/jjmarrue/" ><i class="fa fa-github"></i></a></p>
+      <p><a href="https://github.com/jjmarrue/" target="_blank" ><i class="fa fa-github fa-2x"></i></a></p>
       <p>Copyright &copy; 2022 Juan Mata</p>
       <p>A personal project created for the <a href="https://www.theodinproject.com/" target="_blank">Odin Project</a>.</p>
     </div>
